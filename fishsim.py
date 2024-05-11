@@ -9,7 +9,7 @@ for i in range(50):
 
 fish_amount = 10
 money = 0
-rnd1 = 0 #These vars are called so that the variable is defined just in case the IF statement below is run improperly.
+rnd1 = 0 #These vars are called so that the variable is defined just in case so you don't get "variable not defined" errors below."
 rnd2 = 0
 num_killed = 0
 
