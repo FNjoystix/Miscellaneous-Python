@@ -25,7 +25,7 @@ while money > -1:
 # Round 1
     take = input("How many fish would you like to take in the first round? ")
     if int(take) > fish_amount:
-        print("You do not have that many fish.")
+        print("You do not have enough fish. Round skipped.")
     else:
         print("   You take " + str(take) + " fish in round 1.")
         rnd1 = take
