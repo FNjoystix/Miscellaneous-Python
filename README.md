@@ -1,4 +1,4 @@
-To be run in the Codespaces terminal:
+These programs are intended to be run in the Codespaces terminal (they are all single-file programs):
 
 - In _"rnguess.py"_, it picks a random number from 1-100 (inclusive) and you have to figure it out.
 Made in Python (my first real program!)
