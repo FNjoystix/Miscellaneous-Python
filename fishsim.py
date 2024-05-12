@@ -1,6 +1,5 @@
 #To do:
-# Make the words "are" and "is" change depending on plurality
-# Fix reproduction
+# Make the words "are" and "is"/"were" and "was" change depending on plurality
 
 import random
 import math
@@ -18,11 +17,13 @@ print("- Each fish is worth 1$ in the first round and 3$ in the second. There ar
 print("- 8$ at the end of each year will be extracted for living expenses. If you go below 0$, you lose!")
 print("- In between rounds 1 and 2 there is a chance that some of your fish will die.")
 print("- If you try to take more fish than you have, the round will be skipped. Don't do it!")
+print("Also, if you input anything other than a positive integer, it WILL break.")
 
 while money > -1:
     print("\n")
     print("You have " + str(money) + "$ and there are " + str(fish_amount) + " fish in your lake.")
 # Round 1
+    rnd1 = 0
     take = input("How many fish would you like to take in the first round? ")
     if int(take) > fish_amount:
         print("You do not have that many fish.")
@@ -41,6 +42,7 @@ while money > -1:
     print("   " + str(num_killed) + " fish died. You have " + str(prekill_amount - num_killed) + " fish left.")
         
 # Round 2
+    rnd2 = 0
     take = input("How many fish would you like to take in the second round? ")
     if int(take) > fish_amount:
         print("You do not have that many fish.")
@@ -52,9 +54,9 @@ while money > -1:
     money = (int(money) + int(profit))
 
 # Reproduction Phase
-    # num_born = math.floor(fish_amount / 2)
-    # fish_amount = fish_amount + num_born
-    # print("   " + str(num_born) + " fish were born.")
+    num_born = math.floor(fish_amount / 2)
+    fish_amount = fish_amount + num_born
+    print("   " + str(num_born) + " fish were born.")
 
 # Buy Phase
     print("You have " + str(money) + "$ and there are " + str(fish_amount) + " fish in your lake.")
